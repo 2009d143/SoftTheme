@@ -717,7 +717,6 @@ class BrandCrockSoftTheme extends Plugin implements ThemeInterface
             $this->connection->executeQuery('DELETE FROM `media` WHERE `file_name` = :fileName', ['fileName' => $bcThemeMedianame]);
         }
         $this->connection->executeQuery('SET FOREIGN_KEY_CHECKS=1;');
-        echo "test";
     }
     /**
     * Get Cms page id
