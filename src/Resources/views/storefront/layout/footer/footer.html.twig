@@ -1,0 +1,173 @@
+{% sw_extends '@Storefront/storefront/layout/footer/footer.html.twig' %}
+    
+    {% block layout_footer_navigation %}        
+        <div class="container">
+           {{ parent() }}
+        </div>
+    {% endblock %}
+    
+    {% block layout_footer_payment_shipping_logos %}
+        <div class="container">
+            {{ parent() }}
+        </div>
+    {% endblock %}
+
+{% block layout_footer_navigation_columns %}
+    {% block bc_footer_sm_icons %}
+        <div class="col-md-4 footer-column js-footer-column bc-footer-sm-icons">
+            <div class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger" id="collapseFooterSocialMediaTitle" data-target="#collapseFooterSocialMedia" aria-expanded="true" aria-controls="collapseFooterSocialMedia">
+               Shop Service
+                <div class="footer-column-toggle">
+                    <span class="footer-plus-icon">
+                        {% sw_icon 'plus' %}
+                    </span>
+                    <span class="footer-minus-icon">
+                        {% sw_icon 'minus' %}
+                    </span>
+                </div>
+            </div>
+            <div id="collapseFooterSocialMedia" class="footer-column-content collapse js-footer-column-content footer-contact" aria-labelledby="collapseFooterSocialMediaTitle">
+                <div class="footer-column-content-inner">                    
+                    {% for root in page.footer.navigation.tree %}
+                        {% if root.category.name == "Shop Service" %}
+                            {% for treeItem in root.children %}
+                            {% set category = treeItem.category %}
+                            {% set name = category.translated.name %}
+                            {% set externalLink = category.translated.externalLink %}
+                                <a class="footer-service-menu-link"
+                                   href="{% if externalLink %}{{ externalLink }}{% else %}{{ seoUrl('frontend.navigation.page', { navigationId: category.id }) }}{% endif %}"
+                                   title="{{ name }}">
+                                    <span>{{ name }}</span>
+                                </a>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 footer-column js-footer-column bc-footer-sm-icons">
+            <div class="footer-column-headline footer-headline js-footer-column-headline js-collapse-footer-column-trigger" id="collapseFooterSocialMediaTitle" data-target="#collapseFooterSocialMedia" aria-expanded="true" aria-controls="collapseFooterSocialMedia">
+             Information
+                <div class="footer-column-toggle">
+                    <span class="footer-plus-icon">
+                        {% sw_icon 'plus' %}
+                    </span>
+                    <span class="footer-minus-icon">
+                        {% sw_icon 'minus' %}
+                    </span>
+                </div>
+            </div>
+            <div id="collapseFooterSocialMedia" class="footer-column-content collapse js-footer-column-content footer-contact" aria-labelledby="collapseFooterSocialMediaTitle">
+                <div class="footer-column-content-inner">
+                    {% for root in page.footer.navigation.tree %}
+                        {% if root.category.name == "Information" %}
+                            {% for treeItem in root.children %}
+                            {% set category = treeItem.category %}
+                            {% set name = category.translated.name %}
+                            {% set externalLink = category.translated.externalLink %}
+                                <a class="footer-service-menu-link"
+                                   href="{% if externalLink %}{{ externalLink }}{% else %}{{ seoUrl('frontend.navigation.page', { navigationId: category.id }) }}{% endif %}"
+                                   title="{{ name }}">
+                                    <span>{{ name }}</span>
+                                </a>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+{% endblock %}
+
+{% block layout_footer_bottom %}
+    <div class="footer-bottom">
+        {% block layout_footer_vat %}
+            <div class="footer-vat">
+                {% if context.taxState == "gross" %}
+                    <p>
+                        {{ "footer.includeVat"|trans({
+                            '%url%': path('frontend.cms.page',{ id: shopware.config.core.basicInformation.shippingPaymentInfoPage })
+                        })|raw }}
+                    </p>
+                {% else %}
+                    <p>
+                        {{ "footer.excludeVat"|trans({
+                            '%url%': path('frontend.cms.page',{ id: shopware.config.core.basicInformation.shippingPaymentInfoPage })
+                        })|raw }}
+                    </p>
+                {% endif %}
+            </div>
+        {% endblock %}
+
+        {% block layout_footer_service_menu %}
+            <div class="container">
+                {% block layout_footer_service_menu_content %}
+                    <ul class="footer-service-menu-list list-unstyled">
+                        {% for serviceMenuItem in page.header.serviceMenu %}
+                            {% block layout_footer_service_menu_item %}
+                                <li class="footer-service-menu-item">
+                                    <a class="footer-service-menu-link"
+                                       href="{% if serviceMenuItem.externalLink %}{{ serviceMenuItem.externalLink }}{% else %}{{ seoUrl('frontend.navigation.page', { navigationId: serviceMenuItem.id }) }}{% endif %}"
+                                       title="{{ serviceMenuItem.translated.name }}">
+                                        {{ serviceMenuItem.translated.name }}
+                                    </a>
+                                </li>
+                            {% endblock %}
+                        {% endfor %}
+                    </ul>
+                {% endblock %}
+            </div>
+        {% endblock %}
+
+        {% block layout_footer_copyright %}
+            <div class="social-icons">                
+                {% if shopware.config.BrandCrockSoftTheme.config.bcstenablefacebook %}
+                    <a href="{{ shopware.config.BrandCrockSoftTheme.config.bcstenablefacebookurl }}" id="facebook" target="_blank" aria-label="facebook">
+                        <ul>
+                            <li class="icon--facebook"><i class="fa fa-facebook" aria-hidden="true"></i></li>
+                        </ul>
+                    </a>
+                {% endif %}
+                {% if shopware.config.BrandCrockSoftTheme.config.bcstenabletwitter %}
+                    <a href="{{ shopware.config.BrandCrockSoftTheme.config.bcstenabletwitterurl }}"" id="twitter" target="_blank" aria-label="twitter">
+                        <ul>
+                            <li class="icon--twitter"><i class="fa fa-twitter" aria-hidden="true"></i></li>
+                        </ul>
+                    </a>
+                {% endif %}
+                {% if shopware.config.BrandCrockSoftTheme.config.bcstenableinstagram %}
+                    <a href="{{ shopware.config.BrandCrockSoftTheme.config.bcstenableinstagramurl }}" id="instagram" target="_blank" aria-label="instagram">
+                        <ul>
+                            <li class="icon--instagram"><i class="fa fa-instagram" aria-hidden="true"></i></li>
+                        </ul>
+                    </a>
+                {% endif %}
+                {% if shopware.config.BrandCrockSoftTheme.config.bcstenableyoutube %}
+                    <a href="{{ shopware.config.BrandCrockSoftTheme.config.bcstenableyoutubeurl }}" id="youtube" target="_blank" aria-label="youtube">
+                        <ul>
+                            <li class="icon--video"><i class="fa fa-youtube-play" aria-hidden="true"></i></li>
+                        </ul>
+                    </a>
+                {% endif %}
+                {% if shopware.config.BrandCrockSoftTheme.config.bcstenablestorelocation %}
+                    <a href="{{shopware.config.BrandCrockSoftTheme.config.bcststorelocation}}" id="storelocation" target="_blank" aria-label="storelocation">
+                        <ul>
+                            <li class="icon--map"><i class="fa fa-map-marker" aria-hidden="true"></i></li>
+                        </ul>
+                    </a>
+                {% endif %}
+                </ul>
+            </div>
+            <div class="footer-copyright">                
+                {% if shopware.config.BrandCrockSoftTheme.config.bcstcopyrights is not null and shopware.config.BrandCrockSoftTheme.config.bcstcopyrights is not empty %}
+                    <img src= "{{ shopware.theme['sw-logo-favicon'] }}" width="16.5px" height="16.5px" /> 
+                    {{ shopware.config.BrandCrockSoftTheme.config.bcstcopyrights|trans|sw_sanitize }}
+                {% else %}
+                    {% sw_icon 'shopware' style {'size':'xs'} %}
+                    {{ "footer.copyrightInfo"|trans|sw_sanitize }}
+                {% endif %}
+            </div>
+        {% endblock %}
+    </div>
+{% endblock %}

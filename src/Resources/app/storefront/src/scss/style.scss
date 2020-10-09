@@ -1,0 +1,187 @@
+/* Header Section */
+
+
+.header-search-input, .header-search-input:focus, .header-search-btn, .header-search-input:focus .header-search-btn {
+	border: 1px solid $Bc-Soft-Theme-Primary !important;
+}
+.header-actions-btn:hover, .header-actions-btn:hover .icon, .icon {
+	color: $Bc-Soft-Theme-Primary;
+}
+.header-search {
+	margin-left: 18px !important;
+}
+.header-logo-col {
+	width: 50%;	
+}
+.header-logo-main {
+	text-align: left;
+}
+.top-bar-contact ul{
+	list-style: none;
+    display: inline;
+    float: left;
+}
+.header-row .account-menu{
+	border: 1.5px solid $Bc-Soft-Theme-White;
+}
+
+.header-cart{
+	border:1.5px solid $Bc-Soft-Theme-White !important;
+}
+
+.header-main{
+	background-color:$Bc-Soft-Theme-Primary;
+}
+.account-menu .icon{
+	color:$Bc-Soft-Theme-White;
+}
+.account-menu .icon:hover{
+	color:$Bc-Soft-Theme-Secondary !important;
+}
+.header-cart .icon{
+	color:$Bc-Soft-Theme-White;
+}
+.header-cart .icon:hover{
+	color:$Bc-Soft-Theme-Secondary !important;
+}
+.header-cart .header-cart-total{
+	color:$Bc-Soft-Theme-White;
+}
+.header-cart .header-cart-total:hover{
+	color:$Bc-Soft-Theme-Secondary !important;
+}
+.header-actions-btn:hover, .header-actions-btn:hover .icon{
+	color:$Bc-Soft-Theme-White;
+}
+.top-bar-nav-btn.btn{
+	color:$Bc-Soft-Theme-White;
+}
+.top-bar-nav-btn.btn:hover{
+	color:$Bc-Soft-Theme-Secondary;
+}
+.header-search-input, .header-search-input:focus, .header-search-btn, .header-search-input:focus .header-search-btn{
+	border-radius:34px;
+}
+.navigation-flyout a{
+color:$Bc-Soft-Theme-Secondary;
+}
+.nav-item 
+span:hover{
+	color: $Bc-Soft-Theme-Primary;
+}
+.login-collapse-toggle{
+color:$Bc-Soft-Theme-Secondary;
+}
+.privacy-notice a{
+color:$Bc-Soft-Theme-Secondary;
+}
+.custom-control-label{
+color:$Bc-Soft-Theme-Secondary;
+}
+
+//.searchBox:hover  button.searchButton { background-color: #c13c5b !important;}
+//.searchBox:hover  button.searchButton i.fa-search { color: #fff !important;}
+
+.top-bar-list-item:hover{
+	color:$Bc-Soft-Theme-Secondary;
+}
+.header-logo-main-link {
+	width: 237px;
+}
+
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 102px;
+}
+#bcnavmenu{
+	background:$Bc-Soft-Theme-Primary ;
+	z-index: 9999;
+}
+.main-navigation-link-text{
+color:$Bc-Soft-Theme-White;
+}
+.main-navigation-link.active .main-navigation-link-text {
+	border: none !important;
+}
+/*.searchBox {
+	background: $Bc-Soft-Theme-White;
+	height: 40px;
+	border-radius: 40px;
+}
+.searchBox:hover>.searchInput {
+	width: 240px;
+	padding: 0 6px;
+}
+.searchBox:hover>.searchButton {
+	background: $Bc-Soft-Theme-White;
+	
+}
+.searchButton {
+	float: right;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: $Bc-Soft-Theme-Primary;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: 0.4s;
+    cursor: pointer;
+    border-color:$Bc-Soft-Theme-White;
+}
+.searchInput {
+	border: none;
+	background: none;
+	outline: none;
+	float: left;
+	padding: 0;
+	color:$Bc-Soft-Theme-Primary ;
+	font-size: 16px;
+	transition: 0.4s;
+	line-height: 40px;
+	width: 0px;
+}*/
+.header-minimal{
+	background:$Bc-Soft-Theme-Primary;
+}
+.header-minimal-contact a{
+	color: $Bc-Soft-Theme-White;
+}
+.header-minimal-back-to-shop .btn-outline-primary{
+	border-color:$Bc-Soft-Theme-White;
+}
+.header-minimal-back-to-shop-button{
+	color:$Bc-Soft-Theme-White;
+}
+.header-minimal-back-to-shop .btn-outline-primary:hover{
+	background:$Bc-Soft-Theme-Secondary;
+}
+.is-act-home .breadcrumb{
+	display:none;
+}
+
+
+/* Responsive styles */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px){
+	.header-logo-main{
+		text-align:center;
+	}
+	.header-actions-col{
+	    position: absolute;
+	    right: 0px;
+	}
+}
+
+
+@media screen and (max-width: 620px) {
+	.searchBox:hover>.searchInput {
+		width: 150px;
+		padding: 0 6px;
+	}
+}
+

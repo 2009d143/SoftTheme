@@ -1,0 +1,55 @@
+{% sw_extends '@Storefront/storefront/layout/header/search.html.twig' %}
+
+{% block layout_header_search %}
+    <button id="lg_searchButton" class="searchButton" name="bcSearchModal" aria-label="bcSearchModal" href="#" data-toggle="modal" data-target="#bcSearchModal">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </button>   
+    <div class="modal" id="bcSearchModal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">               
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <div class="collapse"
+                     id="searchCollapse">
+                    <div class="header-search">
+                        <form action="{{ path('frontend.search.page') }}"
+                              method="get"
+                              data-search-form="true"
+                              data-url="{{ path('frontend.search.suggest') }}?search="
+                              class="header-search-form">
+                            {% block layout_header_search_input_group %}
+                                <div class="input-group">
+                                    {% block layout_header_search_input %}
+                                        <input type="search"
+                                               name="search"
+                                               class="form-control header-search-input"
+                                               autocomplete="off"
+                                               autocapitalize="off"
+                                               placeholder="{{ "header.searchPlaceholder"|trans|striptags }}"
+                                               aria-label="{{ "header.searchPlaceholder"|trans|striptags }}"
+                                               value="{{ page.searchTerm }}"
+                                               id="bc_softtheme_search"
+                                        >
+                                    {% endblock %}
+
+                                    {% block layout_header_search_button %}
+                                        <div class="input-group-append">
+                                            <button type="submit"
+                                                    class="btn header-search-btn"
+                                                    aria-label="{{ "header.searchButton"|trans|striptags }}">
+                                                <span class="header-search-icon">
+                                                    {% sw_icon 'search' %}
+                                                </span>
+                                            </button>
+                                        </div>
+                                    {% endblock %}
+                                </div>
+                            {% endblock %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+ 

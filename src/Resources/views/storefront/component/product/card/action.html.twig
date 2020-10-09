@@ -1,0 +1,32 @@
+{% sw_extends '@Storefront/storefront/component/product/card/action.html.twig' %}
+
+{% block component_product_box_action_inner %}    
+    <div class="product-action face-action">
+    	<div class="bc-listing-product-details">
+    		<a href="{{ seoUrl('frontend.detail.page', {'productId': id}) }}" class="bc-soft-product-name" title="{{ name }}"> {{ name }} </a>
+    		{% block component_product_box_price %}
+                {% sw_include '@Storefront/storefront/component/product/card/price-unit.html.twig' %}
+            {% endblock %}
+            {% block component_product_box_rating %}
+                {% if shopware.config.core.listing.showReview %}                	
+                    <div class="product-rating">
+                        {% if product.ratingAverage %}
+	                    	{% if product.ratingAverage >= 4 %}
+	                    		{% set ratingModeColor =  'bc-rating-four' %}
+	                    	{% elseif product.ratingAverage >= 3 and product.ratingAverage < 4 %}
+	                    		{% set ratingModeColor = 'bc-rating-three' %}
+	                    	{% elseif product.ratingAverage >= 2 and product.ratingAverage < 3 %}
+	                    		{% set ratingModeColor = 'bc-rating-two' %}
+	                    	{% elseif product.ratingAverage >= 1 and product.ratingAverage < 2 %}
+	                    		{% set ratingModeColor = 'bc-rating-one' %}
+	                    	{% endif %}
+	                        <div class="bc-soft-product-rating {{ratingModeColor}}"><i class="bc-product-rate">{{product.ratingAverage}}</i> <i class="fa fa-star bc-rating-star"></i></div>
+                        {% endif %}
+                    </div>                                        
+                {% endif %}
+            {% endblock %}
+		</div>
+        {{ parent() }}
+    </div>
+{% endblock %}
+

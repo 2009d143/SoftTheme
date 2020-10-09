@@ -1,0 +1,39 @@
+{
+  "name": "bc/brand-crock-soft-theme",
+  "description": "SoftTheme - Responsive theme",
+  "version": "1.0.0",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "BrandCrock GmbH"
+    }
+  ],
+  "require": {
+    "shopware/storefront": "*"
+  },
+  "extra": {
+    "shopware-plugin-class": "Bc\\BrandCrockSoftTheme\\BrandCrockSoftTheme",
+    "label": {
+      "de-DE": "Thema BrandCrockSoftTheme plugin",
+      "en-GB": "Theme BrandCrockSoftTheme plugin"
+    },
+    "description": {
+      "de-DE": "SoftTheme - Reaktionsfähiges Thema",
+      "en-GB": "SoftTheme - Responsive theme"
+    },
+    "manufacturerLink": {
+      "de-DE": "https://store.shopware.com/brandcrock-gmbh.html",
+      "en-GB": "https://store.shopware.com/en/brandcrock-gmbh.html"
+    },
+    "supportLink": {
+      "de-DE": "https://store.shopware.com/brandcrock-gmbh.html",
+      "en-GB": "https://store.shopware.com/en/brandcrock-gmbh.html"
+    }
+  },  
+  "autoload": {
+    "psr-4": {
+      "Bc\\BrandCrockSoftTheme\\": "src/"
+    }
+  }
+}

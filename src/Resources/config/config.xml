@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/shopware/platform/master/src/Core/System/SystemConfig/Schema/config.xsd">
+
+    <card>
+        <title>Header</title>
+        <title lang="de-DE">Header</title>
+        
+        <input-field type="bool">
+            <name>bcstfixnav</name>
+            <label>Enable Fix Navigation</label>
+            <label lang="de-DE">Enable Fix Navigation</label>
+            <defaultValue>false</defaultValue>
+        </input-field>
+		<input-field type="bool">
+            <name>bcstpromotiontopbar</name>
+            <label>Enable Promotion Topbar</label>
+            <label lang="de-DE">Enable Promotion Topbar</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+    </card>
+	
+	<card>
+        <title>Social Media Share Link (Product Detail)</title>
+        <title lang="de-DE">Social Media Share Link (Product Detail)</title>
+
+        <input-field type="bool">
+            <name>bcstenablefacebookicon</name>
+            <label>Enable Facebook</label>
+            <label lang="de-DE">Enable Facebook</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>bcstenabletwittericon</name>
+            <label>Enable Twitter</label>
+            <label lang="de-DE">Enable Twitter</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>bcstenablewhatsappicon</name>
+            <label>Enable WhatsApp</label>
+            <label lang="de-DE">Enable WhatsApp</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+	</card>
+	
+	<card>
+        <title>Footer Social Media Link</title>
+        <title lang="de-DE">Footer Social Media Link</title>
+        <input-field type="bool">
+            <name>bcstenablefacebook</name>
+            <label>Enable Facebook</label>
+            <label lang="de-DE">Enable Facebook</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+		<input-field>
+            <name>bcstenablefacebookurl</name>
+            <label>Facebook Url</label>
+            <label lang="de-DE">Facebook Url</label>
+            <placeholder>Enter your url ...</placeholder>
+            <placeholder lang="de-DE">Enter your url ...</placeholder>
+            <defaultValue>#</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>bcstenabletwitter</name>
+            <label>Enable Twitter</label>
+            <label lang="de-DE">Enable Twitter</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+		<input-field>
+            <name>bcstenabletwitterurl</name>
+            <label>Twitter Url</label>
+            <label lang="de-DE">Twitter Url</label>
+            <placeholder>Enter your url ...</placeholder>
+            <placeholder lang="de-DE">Enter your url ...</placeholder>
+            <defaultValue>#</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>bcstenableinstagram</name>
+            <label>Enable Instagram</label>
+            <label lang="de-DE">Enable Instagram</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+		<input-field>
+            <name>bcstenableinstagramurl</name>
+            <label>Instagram Url</label>
+            <label lang="de-DE">Instagram Url</label>
+            <placeholder>Enter your url ...</placeholder>
+            <placeholder lang="de-DE">Enter your url ...</placeholder>
+            <defaultValue>#</defaultValue>
+        </input-field>
+        <input-field type="bool">
+            <name>bcstenableyoutube</name>
+            <label>Enable Youtube</label>
+            <label lang="de-DE">Enable Youtube</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+		<input-field>
+            <name>bcstenableyoutubeurl</name>
+            <label>Youtube Url</label>
+            <label lang="de-DE">Youtube Url</label>
+            <placeholder>Enter your url ...</placeholder>
+            <placeholder lang="de-DE">Enter your url ...</placeholder>
+            <defaultValue>#</defaultValue>
+        </input-field> 
+        <input-field type="bool">
+            <name>bcstenablestorelocation</name>
+            <label>Enable Store Location</label>
+            <label lang="de-DE">Enable Store Location</label>
+            <defaultValue>true</defaultValue>
+        </input-field>
+        <input-field>
+            <name>bcststorelocation</name>
+            <label>Store's Location</label>
+            <label lang="de-DE">Store's Location</label>
+            <placeholder>https://www.google.com/maps/place/BrandCrock+GmbH/@48.2840657,11.5665463,19z/data=!3m1!4b1!4m5!3m4!1s0x479e71ce7a4de965:0xaac1754223bfc286!8m2!3d48.2840657!4d11.5670935</placeholder>
+            <placeholder lang="de-DE">https://www.google.com/maps/place/BrandCrock+GmbH/@48.2840657,11.5665463,19z/data=!3m1!4b1!4m5!3m4!1s0x479e71ce7a4de965:0xaac1754223bfc286!8m2!3d48.2840657!4d11.5670935</placeholder>
+            <defaultValue></defaultValue>
+        </input-field>
+        <input-field>
+            <name>bcstcopyrights</name>
+            <label>Copyrights</label>
+            <label lang="de-DE">Copyrights</label>
+            <placeholder>Copyright © ...</placeholder>
+            <placeholder lang="de-DE">Copyright © ...</placeholder>
+            <defaultValue></defaultValue>
+        </input-field>     
+	</card>
+</config>
+
+

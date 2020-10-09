@@ -1,0 +1,176 @@
+{
+    "name": "BrandCrockSoftTheme",
+    "author": "BrandCrock GmbH",
+    "views": [
+        "@Storefront",
+        "@Plugins",
+        "@BrandCrockSoftTheme"
+    ],
+    "previewMedia": "app/storefront/assets/preview.png",
+    "style": [
+        "@Storefront",
+        "app/storefront/src/scss/base.scss",
+        "app/storefront/src/scss/overrides.scss",
+        "app/storefront/src/scss/responsive.scss"    
+    ],
+    "script": [
+        "@Storefront",
+        "app/storefront/dist/storefront/js/brand-crock-soft-theme.js"
+    ],
+    "asset": [
+        "app/storefront/src/assets"
+    ],
+    "config": {
+        "blocks": {
+            "colors": {
+                "themeColors": {
+                    "en-GB": "Theme colours",
+                    "de-DE": "Theme Farben"
+                }
+            }
+        },
+        "tabs": {
+            "SoftTheme Configuration": {
+                "label": {
+                    "en-GB": "SoftTheme Configuration",
+                    "de-DE": "Farben"
+                }
+            }
+        },
+        "fields": {
+            "sw-logo-desktop": {
+                "label": {
+                    "en-GB": "Desktop",
+                    "de-DE": "Desktop"
+                },
+                "helpText": {
+                    "en-GB": "Displayed for viewports of above 991px",
+                    "de-DE": "Wird über einem Viewport von 991px angezeigt"
+                },
+                "type": "media",
+                "value": "public/storefront/img/bc_st_logo.png",
+                "editable": true,
+                "block": "media",
+                "order": 100
+            },
+            "sw-logo-tablet": {
+                "label": {
+                    "en-GB": "Tablet",
+                    "de-DE": "Tablet"
+                },
+                "helpText": {
+                    "en-GB": "Displayed between a viewport of 767px to 991px",
+                    "de-DE": "Wird zwischen einem viewport von 767px bis 991px angezeigt"
+                },
+                "type": "media",
+                "value": "public/storefront/img/bc_st_logo.png",
+                "editable": true,
+                "block": "media",
+                "order": 200
+            },
+            "sw-logo-mobile": {
+                "label": {
+                    "en-GB": "Mobile",
+                    "de-DE": "Mobil"
+                },
+                "helpText": {
+                    "en-GB": "Displayed up to a viewport of 767px",
+                    "de-DE": "Wird bis zu einem Viewport von 767px angezeigt"
+                },
+                "type": "media",
+                "value": "public/storefront/img/bc_st_logo.png",
+                "editable": true,
+                "block": "media",
+                "order": 300
+            },
+            "sw-logo-share": {
+                "label": {
+                    "en-GB": "App & share icon",
+                    "de-DE": "App- & Share-Icon"
+                },
+                "type": "media",
+                "value": "public/storefront/img/bc_st_favicon.png",
+                "editable": true,
+                "block": "media",
+                "order": 400
+            },
+            "sw-logo-favicon": {
+                "label": {
+                    "en-GB": "Favicon",
+                    "de-DE": "Favicon"
+                },
+                "type": "media",
+                "value": "public/storefront/img/bc_st_favicon.png",
+                "editable": true,
+                "block": "media",
+                "order": 500
+            },
+            "Bc-Soft-Theme-Primary": {
+                "label": {
+                    "en-GB": "Primary color",
+                    "de-DE": "Primär"
+                },
+                "type": "color",
+                "value": "#f47795",
+                "editable": true,
+                "tab": "SoftTheme Configuration",
+                "block": "themeColors"                
+            },
+            "Bc-Soft-Theme-Secondary": {
+                "label": {
+                    "en-GB": "Secondary color",
+                    "de-DE": "Primär"
+                },
+                "type": "color",
+                "value": "#c13c5b",
+                "editable": true,
+                "tab": "SoftTheme Configuration",
+                "block": "themeColors"
+            },
+            "Bc-Soft-Theme-Scroll-Up-RGBA": {
+                "label": {
+                    "en-GB": "Scroll Up Button Color",
+                    "de-DE": "Farbe der Scroll-Up-Schaltfläche"
+                },
+                "type": "color",
+                "value": "rgba(193, 60, 91, 1)",
+                "editable": true,
+                "tab": "SoftTheme Configuration",
+                "block": "themeColors"
+            },
+            "Bc-Soft-Theme-Form-Control-RGBA": {
+                "label": {
+                    "en-GB": "Form Control Color",
+                    "de-DE": "Formularsteuerung Farbe"
+                },
+                "type": "color",
+                "value": "rgba(193, 60, 91, .25)",
+                "editable": true,
+                "tab": "SoftTheme Configuration",
+                "block": "themeColors"
+            },
+            "Bc-Soft-Theme-Buy-Button-RGBA": {
+                "label": {
+                    "en-GB": "Buy Button Color",
+                    "de-DE": "Button-Farbe kaufen"
+                },
+                "type": "color",
+                "value": "rgba(193, 60, 91, 0.5)",
+                "editable": true,
+                "tab": "SoftTheme Configuration",
+                "block": "themeColors"
+            },
+            "Bc-Soft-Theme-White": {
+                "label": {
+                    "en-GB": "White Color",
+                    "de-DE": "weiße Farbe"
+                },
+                "type": "color",
+                "value": "#ffffff",
+                "editable": true,
+                "tab": "SoftTheme Configuration",
+                "block": "themeColors"
+            }
+        }
+    }
+}

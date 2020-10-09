@@ -1,0 +1,108 @@
+@import url('https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap');
+@font-face {
+	font-family: Segoe-Light;
+	src: url('../assets/fonts/Segoe-Light.ttf');
+}
+@font-face {
+	font-family: Segoe-SemiBold;
+	src: url('../assets/fonts/Segoe-SemiBold.ttf');
+}
+@font-face {
+	font-family: Segoe-UI-Bold;
+	src: url('../assets/fonts/Segoe-UI-Bold.ttf');
+}
+@font-face {
+	font-family: Segoe-UI-Regular;
+	src: url('../assets/fonts/Segoe-UI-Regular.ttf');
+}
+@font-face {
+	font-family: TT-Lakes-Bold;
+	src: url('../assets/fonts/TT-Lakes-Bold.ttf');
+}
+@font-face {
+	font-family: TT-Lakes-Medium;
+	src: url('../assets/fonts/TT-Lakes-Medium.ttf');
+}
+
+body {
+    font-family: TT-Lakes-Medium;
+}
+a {
+    font-family: TT-Lakes-Bold;
+}
+input,button,select {
+    font-family: TT-Lakes-Medium;
+    font-weight: 400;
+    font-size: 15px;
+}
+table tbody {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 0.97rem;
+}
+p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: TT-Lakes-Bold;
+    font-weight: 500;
+}
+.pagination li label {
+    font-family: TT-Lakes-Bold;
+    font-weight: 500;
+}
+.product-name {
+    font-family: TT-Lakes-Bold;
+    font-size: 20px;
+    font-weight: 500;
+}
+.product-description {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 1.09rem;
+    font-weight: 500;
+}
+.product-price {
+    font-style: normal;
+}
+.product-detail-manufacturer-link {
+    font-size: 1.2rem !important;
+}
+.product-detail-tax {
+    font-size: 0.8rem !important;
+}
+.bcreadmore {
+    font-family: TT-Lakes-Medium;
+    font-weight: 400;
+    font-size: 18px;
+}
+.bc-soft-product-name {
+    font-family: TT-Lakes-Bold;
+    font-size: 16px;
+    font-weight: 500;
+}
+.bc-product-rate {
+    font-family: sans-serif;
+}
+div.quickview-minimal-top a, div.quickview-minimal-top p  {
+    font-family: TT-Lakes-Medium;
+}
+@media only screen and (max-width: 320px) {
+	h2 {
+		font-size: 18px;
+	}
+	p {
+		font-size: 13px;
+	}
+}
+@media screen and (min-width:320px) and (max-width:375px) {
+	h2 {
+		font-size: 18px;
+	}
+	p {
+		font-size: 13px;
+	}
+}
